@@ -409,10 +409,21 @@ margin-bottom: 30px;
   height: 100%;
   border-radius: 50%;
   background-color: tomato;
-  
+  color: #ffffff;
 }
 
-.our-team-soc-icon {color: #000000;}
+/* Это svg */
+.our-team-soc-icon {
+  fill: currentColor;
+}
+
+.our-team-link:hover,
+.our-team-link:focus {
+  background: #2196F3;
+  color: #ffffff;
+}
+
+/* .our-team-soc-icon {flex-grow: 2;} */
 
 
 /*Футер*/
