@@ -48,8 +48,9 @@ ul {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid red;
 }
+
+
 
 .header-link {
   margin-left: auto;
@@ -175,14 +176,75 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
+  display: flex;
+  justify-items: center;
 }
 
-.header-mail :hover {
-  color: #2196f3;
-}
-.header-mail :focus {
-  color: #2196f3;
-}
+ /* Конверт и телефон */
+
+/*Это ul*/
+.icon-envelope-our-team-soc-link,
+ .icon-smartphone-our-team-soc-link {
+  display: flex;
+  justify-content: center;
+  }
+  
+  /* .icon-envelope-our-team-soc-link,
+  .icon-smartphone-our-team-soc-link:first-child {margin-left: 0px;} */
+  
+  /*Это li*/
+  .icon-envelope-our-team-soc-item, 
+  .icon-smartphone-our-team-soc-item {
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+  }
+  /* .icon-envelope-our-team-soc-item,
+  .icon-smartphone-our-team-soc-item:last-child {margin-left: 0px;} */
+  
+  /* .icon-envelope-our-team-link,
+  .icon-smartphone-our-team-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color: #AFB1B8;
+  } */
+  
+  /* Это svg */
+  .icon-envelope-our-team-soc-icon,
+  .icon-smartphone-our-team-soc-icon {
+    fill: currentColor;
+  }
+  
+  /* .icon-envelope-our-team-link:hover,
+  .icon-envelope-our-team-link:focus {
+    background: #2196F3;
+    color: #ffffff;
+  } */
+  /* Конверт и телефон СВЕРХУ */
+
+  /* .icon-envelope-our-team-soc-item :hover {color: #2196f3;}
+  .icon-envelope-our-team-soc-item :focus {color: #2196f3;} */
+
+    
+
+  .header-mail :hover {
+    color: #2196f3;
+  }
+  .header-mail :focus {
+    color: #2196f3;
+  }
+
+/* .header-mail {}
+
+ .header-mail::before {
+  content: "";
+  }  */
+
+
 
 .effective-solutions {
   background-color: var(--effective-solutions-color);
@@ -202,11 +264,16 @@ display: center;
 .effective-solutions {
  background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
   url(../img/zadniyfon_hero.jpg);
-  
- background-repeat: no-repeat;
+  background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
+ max-width: 1600px;
+ height: 600px;
+ margin-left: auto;
+ margin-right: auto;
 }
+
+
 
 .effective-solutions-h1 {
   font-weight: 900;
@@ -553,31 +620,38 @@ margin-bottom: 30px;
 
 
 .logo-footer {
-  display: block;
-  margin-bottom: 20px;}
+ display: block;
+ margin-bottom: 20px;}
 
-  /* .footer-our-team-div {
+   
 
-  } */
 
   .footer-join-h3 {
    font-family: 'Roboto';
    font-style: normal;
    font-weight: 700;
    font-size: 14px;
-   line-height: 1.14;
+   line-height: 16px;
    letter-spacing: 0.03em;
    text-transform: uppercase;
    color: #FFFFFF;
+   margin-left: 70px;
+   margin-bottom: 20px;
   }
 
   .footer-our-team-soc-link {
     display: flex;
+    margin-left: 70px;
+    margin-right: auto;
     justify-content: center;
-    margin-bottom: 30px;
+    }
+
+    .footer_flex {
+      display: flex;
+      align-items: center;
     }
     
-    .footer-our-team-soc-link:first-child {margin-left: 0px;}
+    /* .footer-our-team-soc-link:first-child {margin-left: 0px;} */
     
     /*Это li*/
     .footer-our-team-soc-item{
@@ -594,7 +668,8 @@ margin-bottom: 30px;
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      color: #AFB1B8;
+      background: rgba(255, 255, 255, 0.1);;
+      color: #ffffff;
     }
     
     /* Это svg */
@@ -606,6 +681,8 @@ margin-bottom: 30px;
     .footer-our-team-link:focus {
       background: #2196F3;
       color: #ffffff;}
+
+      
 
 
 
@@ -670,6 +747,14 @@ margin-bottom: 30px;
   background: #ffffff;
   display: block;
 }
+
+.project-items:hover,
+.project-items:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+
+
 /*border: 1px solid #eeeeee;*/
 
 .project-items:nth-last-child(-2n + 3) {
